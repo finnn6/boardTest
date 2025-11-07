@@ -13,7 +13,7 @@ app = FastAPI(title="CRUD Board API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://board-test-flax.vercel.app/",  # Vercel URL
+        "https://board-test-flax.vercel.app",  # Vercel URL
         "http://localhost:3000",  # 로컬 개발용
         "http://localhost:5173",  # Vite 사용 시
     ],
