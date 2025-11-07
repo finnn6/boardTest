@@ -12,7 +12,11 @@ app = FastAPI(title="CRUD Board API")
 # CORS 설정
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=[
+        "https://boardtest-backend.onrender.com",  # Vercel URL
+        "http://localhost:3000",  # 로컬 개발용
+        "http://localhost:5173",  # Vite 사용 시
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
