@@ -1,7 +1,7 @@
 import ky from 'ky'
 
 const api = ky.create({
-  prefixUrl: process.env.REACT_APP_API_URL || 'http://localhost:8000',
+  prefixUrl: import.meta.env.VITE_API_URL || 'http://localhost:8000',
   // headers: {
   //   'Content-Type': 'application/json'
   // },
