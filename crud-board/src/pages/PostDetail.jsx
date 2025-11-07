@@ -57,7 +57,8 @@ function PostDetail() {
 
       // 현재 로그인한 사용자가 작성자인지 확인
       const currentUserId = localStorage.getItem('user_info')
-      setIsAuthor(JSON.parse(currentUserId)['userIdx'] === responseObj.author_id)
+      const parsedUser = currentUserId ? JSON.parse(currentUserId) : null
+      setIsAuthor(parsedUser?.userIdx === responseObj.author_id)
       
     } catch (error) {
       console.error('게시글 불러오기 실패:', error)
